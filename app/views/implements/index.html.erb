@@ -1,0 +1,23 @@
+<h1>Listing implements</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @implements.each do |implement| %>
+  <tr>
+    <td><%= implement.name %></td>
+    <td><%= link_to 'Show', implement %></td>
+    <td><%= link_to 'Edit', edit_implement_path(implement) %></td>
+    <td><%= link_to 'Destroy', implement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Implement', new_implement_path %>

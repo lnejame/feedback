@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @company.name %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @company.contact %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @company.email %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= @company.industry.name %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @company.description %>
+</p>
+<p>
+  <b>Current System:</b>
+  <%= @company.currentsystem.name %>
+</p> 
+<p>
+  <b>User Count:</b>
+  <%= @company.usercount.amount %>
+</p>
+<p>
+  <b>System Preference:</b>
+  <%= @company.system_preference.name %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company), class: "btn" %> |
+<%= link_to 'Back', companies_path, class: "btn" %>

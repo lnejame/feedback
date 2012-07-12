@@ -1,0 +1,23 @@
+<h1>Listing currentsystems</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @currentsystems.each do |currentsystem| %>
+  <tr>
+    <td><%= currentsystem.name %></td>
+    <td><%= link_to 'Show', currentsystem %></td>
+    <td><%= link_to 'Edit', edit_currentsystem_path(currentsystem) %></td>
+    <td><%= link_to 'Destroy', currentsystem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Currentsystem', new_currentsystem_path %>

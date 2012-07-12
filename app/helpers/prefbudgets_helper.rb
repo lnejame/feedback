@@ -1,0 +1,2 @@
+module PrefbudgetsHelper
+end

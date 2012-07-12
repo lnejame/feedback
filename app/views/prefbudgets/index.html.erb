@@ -1,0 +1,23 @@
+<h1>Listing prefbudgets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prefbudgets.each do |prefbudget| %>
+  <tr>
+    <td><%= prefbudget.name %></td>
+    <td><%= link_to 'Show', prefbudget %></td>
+    <td><%= link_to 'Edit', edit_prefbudget_path(prefbudget) %></td>
+    <td><%= link_to 'Destroy', prefbudget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prefbudget', new_prefbudget_path %>

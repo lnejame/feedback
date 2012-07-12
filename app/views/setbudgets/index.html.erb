@@ -1,0 +1,23 @@
+<h1>Listing setbudgets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @setbudgets.each do |setbudget| %>
+  <tr>
+    <td><%= setbudget.name %></td>
+    <td><%= link_to 'Show', setbudget %></td>
+    <td><%= link_to 'Edit', edit_setbudget_path(setbudget) %></td>
+    <td><%= link_to 'Destroy', setbudget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Setbudget', new_setbudget_path %>

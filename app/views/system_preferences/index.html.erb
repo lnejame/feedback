@@ -1,0 +1,23 @@
+<h1>Listing system_preferences</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @system_preferences.each do |system_preference| %>
+  <tr>
+    <td><%= system_preference.name %></td>
+    <td><%= link_to 'Show', system_preference %></td>
+    <td><%= link_to 'Edit', edit_system_preference_path(system_preference) %></td>
+    <td><%= link_to 'Destroy', system_preference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New System preference', new_system_preference_path %>

@@ -1,0 +1,23 @@
+<h1>Listing usercounts</h1>
+
+<table>
+  <tr>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @usercounts.each do |usercount| %>
+  <tr>
+    <td><%= usercount.amount %></td>
+    <td><%= link_to 'Show', usercount %></td>
+    <td><%= link_to 'Edit', edit_usercount_path(usercount) %></td>
+    <td><%= link_to 'Destroy', usercount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Usercount', new_usercount_path %>

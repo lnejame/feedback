@@ -1,0 +1,26 @@
+<%= simple_form_for(@company) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :contact %>
+    <%= f.input :email %>
+    <%= f.association :industry %>
+    <%= f.input :description, label: "Project Description" %>
+    <%= f.association :currentsystem, label: "Current system?" %>
+    <%= f.association :usercount, label: "How many user will you have?" %>
+    <%= f.association :system_preference, label: "What is your system preference?", as: :radio_buttons %>
+    <br />
+    <%= f.association :host_preference, label: "If web based, which hosting option would you prefer?", as: :radio_buttons %>
+    <br />
+    <%= f.input :budget, as: :radio, label: "Do you have a budget for this project?" %>
+    <br />
+    <%= f.association :setbudget, label: "What is your budget range?" %>
+    <%= f.association :prefbudget, label: "What is your preferred budget range?" %>
+    <%= f.input :comments %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, label: "Submit" %>
+  </div>
+<% end %>
