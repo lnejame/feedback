@@ -1,22 +1,6 @@
 Feedback::Application.routes.draw do
 
 
-  resources :prefbudgets
-
-  resources :setbudgets
-
-  resources :implements
-
-  resources :host_preferences
-
-  resources :system_preferences
-
-  resources :currentsystems
-
-  resources :usercounts
-
-  resources :industries
-
   get "pages/about"
 
   get "pages/help"
@@ -26,6 +10,8 @@ Feedback::Application.routes.draw do
   resources :companies
   
   root to: 'pages#home'
+  
+  resources :user_steps
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -17,7 +17,7 @@
 
 <p>
   <b>Industry:</b>
-  <%= @company.industry.name %>
+  <%= @company.industry %>
 </p>
 <p>
   <b>Description:</b>
@@ -25,16 +25,35 @@
 </p>
 <p>
   <b>Current System:</b>
-  <%= @company.currentsystem.name %>
+  <%= @company.currentsystem %>
 </p> 
 <p>
   <b>User Count:</b>
-  <%= @company.usercount.amount %>
+  <%= @company.usercount %>
 </p>
 <p>
   <b>System Preference:</b>
-  <%= @company.system_preference.name %>
+  <%= @company.system_preference %>
 </p>
-
+<p>
+  <b>Implementation time:</b>
+  <%= @company.implement_id %>
+</p>
+<p>
+  <b>Budget:</b>
+  <%= @company.budget %>
+</p>
+<p>
+  <b>Set Budget range:</b>
+  <%= @company.setbudget %>
+</p>
+<p>
+  <b>Preferred Budget Range:</b>
+  <%= @company.prefbudget %>
+</p>
+<p>
+  <b>Comments:</b>
+  <%= @company.comments %>
+</p>
 <%= link_to 'Edit', edit_company_path(@company), class: "btn" %> |
 <%= link_to 'Back', companies_path, class: "btn" %>

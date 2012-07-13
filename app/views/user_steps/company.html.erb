@@ -1,0 +1,16 @@
+<%= simple_form_for @company, url: wizard_path do |f| %>
+  <h2>General Company Information</h2>
+	<div class="form-inputs">
+	    <%= f.input :name %>
+	    <%= f.input :contact %>
+	    <%= f.input :email %>
+	    <%= f.label "Industry" %>
+	    <%= f.collection_select :industry, Company::INDUSTRIES, :to_s, :to_s, 
+	       :include_blank => true %>
+	    <%= f.input :other1, label: "Other"%>
+	</div>
+
+  <div class="form-actions">
+    <%= f.button :submit, label: "Continue" %>
+  </div>
+<% end %>

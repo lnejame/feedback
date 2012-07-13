@@ -5,18 +5,35 @@
     <%= f.input :name %>
     <%= f.input :contact %>
     <%= f.input :email %>
-    <%= f.association :industry %>
+    <%= f.label "Industry" %>
+    <%= f.collection_select :industry, Company::INDUSTRIES, :to_s, :to_s, 
+       :include_blank => true %>
+    <%= f.input :other1, label: "Other"%>
     <%= f.input :description, label: "Project Description" %>
-    <%= f.association :currentsystem, label: "Current system?" %>
-    <%= f.association :usercount, label: "How many user will you have?" %>
-    <%= f.association :system_preference, label: "What is your system preference?", as: :radio_buttons %>
+    <%= f.label "What system do you currently use?" %>
+    <%= f.collection_select :currentsystem, Company::CURRENTSYSTEMS, :to_s, :to_s, 
+       :include_blank => true %>
+    <%= f.input :other2, label: "Other" %>
+    <%= f.label "How many user will need access to the system?" %>
+    <%= f.collection_select :usercount, Company::USERCOUNTS, :to_s, :to_s, 
+       :include_blank => true %>
+    <%= f.label "What is your preferred system type?" %>
+    <%= f.collection_radio_buttons :system_preference, Company::SYSTEM_PREFERENCES, :to_s, :to_s %>
     <br />
-    <%= f.association :host_preference, label: "If web based, which hosting option would you prefer?", as: :radio_buttons %>
+    <%= f.label "If web based, which hosting option would you prefer?" %>
+    <%= f.collection_radio_buttons :host_preference, Company::HOST_PREFERENCES, :to_s, :to_s %>
+    <%= f.label "When do you plan on implementing a system?" %>
+    <%= f.collection_select :implement_id, Company::IMPLEMENTS, :to_s, :to_s, 
+       :include_blank => true %>
     <br />
     <%= f.input :budget, as: :radio, label: "Do you have a budget for this project?" %>
     <br />
-    <%= f.association :setbudget, label: "What is your budget range?" %>
-    <%= f.association :prefbudget, label: "What is your preferred budget range?" %>
+    <%= f.label "What is your budget range?" %>
+    <%= f.collection_select :setbudget, Company::SETBUDGETS, :to_s, :to_s, 
+       :include_blank => true %>
+    <%= f.label "What is your preferred budget range?" %>
+    <%= f.collection_select :prefbudget, Company::PREFBUDGETS, :to_s, :to_s, 
+       :include_blank => true %>   
     <%= f.input :comments %>
   </div>
 

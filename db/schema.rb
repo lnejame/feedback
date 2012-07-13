@@ -11,28 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712181610) do
+ActiveRecord::Schema.define(:version => 20120713185550) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "contact"
     t.string   "email"
     t.string   "industry"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.text     "description"
-    t.string   "currentsystem_id"
-    t.string   "usercount_id"
-    t.string   "industry_id"
+    t.string   "currentsystem"
+    t.string   "usercount"
     t.boolean  "syspref"
     t.boolean  "hostpref"
-    t.boolean  "system_preference_id"
-    t.boolean  "host_preference_id"
+    t.boolean  "system_preference"
+    t.boolean  "host_preference"
     t.string   "implement_id"
     t.boolean  "budget"
-    t.string   "setbudget_id"
-    t.string   "prefbudget_id"
+    t.string   "setbudget"
+    t.string   "prefbudget"
     t.text     "comments"
+    t.string   "other1"
+    t.string   "other2"
   end
 
   create_table "currentsystems", :force => true do |t|
