@@ -1,15 +1,9 @@
-<%= simple_form_for(@company) do |f| %>
-  <%= f.error_notification %>
-  <div class="form-inputs">	
+	<div class="form-inputs">	
 		<div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
-                
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                <div class="btn btn-primary">
-                	<b>General Company Information</b> 
-                </div>
-                
+                 General Company Information
                 </a>
               </div>
               <div id="collapseOne" class="accordion-body collapse in">
@@ -32,10 +26,7 @@
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  <div class="btn btn-primary">
-                  	<b>Project Information</b>
-                  </div>
-                  
+                  Project Information
                 </a>
               </div>
               <div id="collapseTwo" class="accordion-body collapse">
@@ -59,10 +50,7 @@
             <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                  <div class="btn btn-primary">
-                  	<b>Budget and Implementation</b>
-                  </div>
-                  
+                  Budget and Implementation
                 </a>
               </div>
               <div id="collapseThree" class="accordion-body collapse">
@@ -85,9 +73,3 @@
             </div>
           </div>
        </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, label: "Submit" %>
-  </div>
-<% end %>
-

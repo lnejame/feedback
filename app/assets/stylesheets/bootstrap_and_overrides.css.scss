@@ -11,3 +11,20 @@ body { padding-top: 60px; }
 .navbar .brand {
   color: #00AEEF;
 }
+
+textarea {
+  height: 100px;
+  width: 500px;
+}
+
+.collection_radio_buttons {
+  .inline {
+    margin: 2px
+  }
+}
+label.collection_radio_buttons {
+  float: none;
+  margin: 0;
+  vertical-align: -2px;
+  margin-left: 2px;
+}

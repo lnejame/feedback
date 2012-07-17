@@ -1,16 +1,21 @@
-<%= simple_form_for @company, url: wizard_path do |f| %>
-  <h2>General Company Information</h2>
-	<div class="form-inputs">
-	    <%= f.input :name %>
-	    <%= f.input :contact %>
-	    <%= f.input :email %>
-	    <%= f.label "Industry" %>
-	    <%= f.collection_select :industry, Company::INDUSTRIES, :to_s, :to_s, 
-	       :include_blank => true %>
-	    <%= f.input :other1, label: "Other"%>
-	</div>
+<%= simple_form_for @company, :url => wizard_path do |f| %>
+ 
 
-  <div class="form-actions">
-    <%= f.button :submit, label: "Continue" %>
-  </div>
+<h3>General Company Information</h3>
+  <div class="form-inputs">
+  	
+    <%= f.input :name, label: "Company name", placeholder: "Enter company name"  %>
+    
+    <%= f.input :contact, label: "Contact(s)", placeholder: "Names of people involved" %>
+   
+    <%= f.input :email, label: "Email(s)", placeholder: "Emails of contacts" %>
+    
+    <%= f.label "Industry" %>
+    <%= f.collection_select :industry, Company::INDUSTRIES, :to_s, :to_s, 
+       :include_blank => true %>
+    <%= f.input :other1, label: "Other"%>
+   
+    <div class="actions">
+       <%= f.submit "Continue" %>
+  	</div>
 <% end %>

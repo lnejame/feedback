@@ -1,18 +1,13 @@
-<h1>Start here</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="hero-unit">
+<h2>Customer Information System</h2>
 
+<br />
 
-<div class="btn-group">
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    Companies
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-    <%= link_to 'New Company', new_company_path %>
-    <%= link_to 'List', companies_path %>
-  </ul>
+    <%= link_to 'New Company', new_company_path, class: "btn-large" %>
+
+    <%= link_to 'List', companies_path, class: "btn btn-primary" %>
+
 </div>
-
 
 
 
